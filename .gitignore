@@ -15,6 +15,7 @@ dist-ssr
 App.svelte
 index.html
 main.js
+.storybook
 
 # Editor directories and files
 .vscode/*
