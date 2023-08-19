@@ -7,14 +7,12 @@ export default {
 	argTypes: {
 		size: {
 			control: {type: "select"},
-			options: ["XS", "S", "M", "L", "Fill"],
+			options: ["XS", "S", "M", "L", "Block"],
 		},
 		appearance: {
 			control: {type: "select"},
-			options: ["Flex", "Primary"],
+			options: ["Primary"],
 		},
-		backgroundColor: {control: "color"},
-		backgroundColorHover: {control: "color"},
 		textColor: {control: "color"},
 	},
 };

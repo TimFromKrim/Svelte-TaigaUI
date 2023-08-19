@@ -1,3 +1,4 @@
+// @ts-nocheck
 let opacity = 0.5;
 let throughWidth = "100";
 let throughThickness = "2";
