@@ -1,15 +1,15 @@
 .animation-spin {
-  animation-name: spin;
-  animation-duration: 750ms;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+	animation-name: spin;
+	animation-duration: 750ms;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
 }
 
 @keyframes spin {
-    from {
-        transform:rotate(0deg);
-    }
-    to {
-        transform:rotate(360deg);
-    }
-  }
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}

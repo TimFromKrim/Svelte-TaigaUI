@@ -15,16 +15,13 @@
 	 */
 
 	import "./StuiButton.scss";
-	// @ts-ignore
-	import StuiIconLoader from "@/assets/stui-icons/iconsComponents/StuiIconLoader.svelte";
-
-	import "@/assets/animations/animationSpin.scss";
+	import StuiLoader from "$lib/components/StuiLoader/StuiLoader.svelte";
 
 	export let size = "L";
 	const validSizes = ["L", "M", "S", "XS", "Block"];
 	export let appearance = "Primary";
 	const validAppearance = ["Primary"];
-	export let textColor = "--stui-base-01";
+	export let textColor = "var(--stui-base-01)";
 	export let label = true;
 	export let loader = false;
 	$: {
@@ -46,14 +43,12 @@
 >
 	{#if $$slots.icoLeft || loader}
 		<div
-			class="ico-left"
-			class:ico-left_big={size == "L" || size == "M" || size == "Block"}
-			class:ico-left_small={size == "S" || size == "XS"}
+			class="ico"
+			class:ico_big={size == "L" || size == "M" || size == "Block"}
+			class:ico_small={size == "S" || size == "XS"}
 		>
 			{#if loader}
-				<div class="animation-spin" style="display: flex;">
-					<StuiIconLoader />
-				</div>
+				<StuiLoader color={textColor} />
 			{:else}
 				<slot name="icoLeft" />
 			{/if}
@@ -67,5 +62,14 @@
 		>
 			<slot>Button</slot>
 		</span>
+	{/if}
+	{#if $$slots.icoRight && !loader}
+		<div
+			class="ico"
+			class:ico_big={size == "L" || size == "M" || size == "Block"}
+			class:ico_small={size == "S" || size == "XS"}
+		>
+			<slot name="icoRight" />
+		</div>
 	{/if}
 </button>
