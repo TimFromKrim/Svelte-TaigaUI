@@ -24,11 +24,10 @@
 			class="loader-path"
 			cx="50"
 			cy="50"
-			r="20"
+			r="22"
 			fill="none"
 			stroke="inherit"
 			stroke-width="inherit"
-			stroke-dasharray="314"
 		/>
 	</svg>
 </div>
