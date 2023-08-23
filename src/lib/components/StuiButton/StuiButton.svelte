@@ -45,6 +45,9 @@
 	let loaderColor = {
 		Primary: "var(--stui-text-01-night)",
 		Secondary: "var(--stui-link)",
+		Accent: "var(--stui-text-01-night)",
+		Flat: "var(--stui-link)",
+		Outline: "var(--stui-link)",
 	};
 
 	$: {

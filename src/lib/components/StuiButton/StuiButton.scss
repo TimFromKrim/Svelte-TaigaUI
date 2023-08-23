@@ -5,6 +5,8 @@
 	font-size: 10px;
 }
 
+// TODO: Add different way: stuiButton, stuiIconButton
+
 .stui-button {
 	display: flex;
 	align-items: center;
@@ -91,8 +93,6 @@
 			}
 		}
 	}
-
-	// TODO: Make different appearance and configure storybook
 
 	.ico {
 		&_big {
