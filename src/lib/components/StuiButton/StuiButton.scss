@@ -11,7 +11,6 @@
 	justify-content: center;
 
 	border: 0;
-
 	border-radius: 1.2rem;
 
 	padding: 0;
@@ -25,6 +24,10 @@
 
 	background: var(--stui-clear);
 
+	transition-property: color, background, opacity;
+	transition-duration: var(--stui-duration, 0.3s);
+	transition-timing-function: ease-in-out;
+
 	cursor: pointer;
 
 	&_primary {
@@ -32,9 +35,21 @@
 
 		background: var(--stui-primary);
 
-		&:hover {
+		&:not([disabled]):hover {
 			@media #{mediaQueries.$stui-mouse-device} {
 				background: var(--stui-primary-hover);
+			}
+		}
+	}
+
+	&_secondary {
+		color: var(--stui-link);
+
+		background: var(--stui-secondary);
+
+		&:not([disabled]):hover {
+			@media #{mediaQueries.$stui-mouse-device} {
+				background: var(--stui-secondary-hover);
 			}
 		}
 	}
@@ -42,11 +57,37 @@
 	&_accent {
 		color: var(--stui-text-01-night);
 
-		background: var(--stui-primary);
+		background: var(--stui-accent);
 
-		&:hover {
+		&:not([disabled]):hover {
 			@media #{mediaQueries.$stui-mouse-device} {
-				background: var(--stui-primary-hover);
+				background: var(--stui-accent-hover);
+			}
+		}
+	}
+
+	&_flat {
+		color: var(--stui-link);
+
+		background: transparent;
+
+		&:not([disabled]):hover {
+			@media #{mediaQueries.$stui-mouse-device} {
+				background: var(--stui-secondary-hover);
+			}
+		}
+	}
+
+	&_outline {
+		border: 1px solid var(--stui-base-04);
+
+		color: var(--stui-link);
+
+		background: transparent;
+
+		&:not([disabled]):hover {
+			@media #{mediaQueries.$stui-mouse-device} {
+				background: var(--stui-base-02);
 			}
 		}
 	}

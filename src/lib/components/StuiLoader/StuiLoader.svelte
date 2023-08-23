@@ -10,7 +10,7 @@
 	export let color = "var(--stui-primary-text)";
 
 	/**
-	 *
+	 * Loader thick
 	 *
 	 * @type {number}
 	 * @default 5
